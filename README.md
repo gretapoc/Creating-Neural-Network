@@ -29,7 +29,7 @@ In the network, we will:
 ## Solution
 
 The NumPy library is imported.
-```
+```python
 import numpy as np
 ```
 
