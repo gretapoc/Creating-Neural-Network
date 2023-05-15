@@ -189,24 +189,16 @@ all_y_trues = np.array([0,
                        ])
 ```
 
-An instance of the OurNeuralNetwork class is created.
+An instance of the OurNeuralNetwork class is created. The neural network is trained using the given input data and target values.
 ```
 network = OurNeuralNetwork()
-```
-
-The neural network is trained using the given input data and target values.
-```
 network.train(data, all_y_trues)8
 ```
 
 
-An array representing the features (height and weight) of the fifth user is created.
+An array representing the features (height and weight) of the fifth user is created. The features of the fifth user are fed to the trained network, and the output prediction is printed.
 ```
 name5 = np.array([0.76978417, 0.02158273])
-```
-
-The features of the fifth user are fed to the trained network, and the output prediction is printed.
-```
 print("Name 5: %.3f" % network.feedforward(name5))
 ```
 
