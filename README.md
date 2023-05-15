@@ -50,7 +50,7 @@ X = np.array([[161,  55],
              ])
 ```
 
-# Normalize the input data
+Normalize the input data
 ```
 scaled_x = NormalizeData(X)
 ```
