@@ -5,7 +5,7 @@
 
 Let's create a neural network that would predict the gender of the fifth user ($0$ - female, $1$ - male) based on height and weight features. The height and weight attributes are the input data for the neural network, and the gender prediction is the output. 
 
-![image]()
+![image](https://github.com/gretapoc/Creating-Neural-Network/blob/main/nn.png)
 
 The data is given:
 
