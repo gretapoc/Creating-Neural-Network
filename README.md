@@ -48,6 +48,7 @@ X = np.array([[161,  55],
               [162,  58],
               [185,  90],
              ])
+```
 
 # Normalize the input data
 ```
