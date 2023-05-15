@@ -50,13 +50,9 @@ X = np.array([[161,  55],
              ])
 ```
 
-The input data is normalized.
+The input data is normalized and the scaled input data is printed.
 ```
 scaled_x = NormalizeData(X)
-```
-
-The scaled input data is printed.
-```
 print(scaled_x)
 ```
 
