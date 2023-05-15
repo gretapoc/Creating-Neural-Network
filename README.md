@@ -28,18 +28,18 @@ In the network, we will:
 
 ## Solution
 
-Import the NumPy library.
+The NumPy library is imported.
 ```
 import numpy as np
 ```
 
-Function to normalize data in the range $[0,1]$ using min-max feature scaling.
+A function is used to normalize data in the range $[0, 1]$ using min-max feature scaling.
 ```
 def NormalizeData(data):
     return (data - np.min(data)) / (np.max(data) - np.min(data))
 ```
 
-Input data representing height and weight of patients.
+The input data represents the height and weight of patients.
 ```
 X = np.array([[161,  55],
               [183,  95],
@@ -50,30 +50,30 @@ X = np.array([[161,  55],
              ])
 ```
 
-Normalize the input data.
+The input data is normalized.
 ```
 scaled_x = NormalizeData(X)
 ```
 
-Print the scaled input data.
+The scaled input data is printed.
 ```
 print(scaled_x)
 ```
 
-Define the sigmoid activation function : $f(x) = 1 / (1 + \e^(-x))$.
+The sigmoid activation function is defined : $f(x) = 1 / (1 + e^(-x))$.
 ```
 def sigmoid(x):
     return 1 / (1 + np.exp(-x))
 ```
 
-Define the derivative of the sigmoid function : $f'(x) = f(x) * (1 - f(x))$.
+The derivative of the sigmoid function is defined : $f'(x) = f(x) * (1 - f(x))$.
 ```
 def deriv_sigmoid(x):
     fx = sigmoid(x)
     return fx * (1 - fx)
 ```
 
-Define the mean squared error loss function.
+The mean squared error loss function is defined.
 ```
 def mse_loss(y_true, y_pred):
     return ((y_true - y_pred) ** 2).mean()
@@ -167,7 +167,7 @@ In order to reduce the error of the neural network, it is necessary to update th
                 self.b3 -= learn_rate * d_L_d_ypred * d_ypred_d_b3
 ```
 
-Compute and print the loss every 10 epochs
+The loss is computed and printed every $10$ epochs.
 ```
                 if epoch % 10 == 0:
                     y_preds = np.apply_along_axis(self.feedforward, 1, data)
@@ -176,7 +176,7 @@ Compute and print the loss every 10 epochs
                     
 ```
 
-Define the input data and corresponding target values
+The input data and corresponding target values are defined.
 ```
 data = np.array([[0.76258993, 0.00000000],
                  [0.92086331, 0.28776978],
@@ -193,24 +193,23 @@ all_y_trues = np.array([0,
                        ])
 ```
 
-
-Create an instance of the OurNeuralNetwork class
+An instance of the OurNeuralNetwork class is created.
 ```
 network = OurNeuralNetwork()
 ```
 
-Train the neural network using the given input data and target values
+The neural network is trained using the given input data and target values.
 ```
 network.train(data, all_y_trues)8
 ```
 
 
-Create an array representing the features (height and weight) of the fifth user
+An array representing the features (height and weight) of the fifth user is created.
 ```
 name5 = np.array([0.76978417, 0.02158273])
 ```
 
-Feed the features of the fifth user to the trained network and print the output prediction
+The features of the fifth user are fed to the trained network, and the output prediction is printed.
 ```
 print("Name 5: %.3f" % network.feedforward(name5))
 ```
