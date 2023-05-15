@@ -56,7 +56,7 @@ scaled_x = NormalizeData(X)
 print(scaled_x)
 ```
 
-The sigmoid activation function is defined : $f(x) = 1 / (1 + e^(-x))$.
+The sigmoid activation function is defined : $f(x) = 1 / (1 + e^{(-x)})$.
 ```
 def sigmoid(x):
     return 1 / (1 + np.exp(-x))
