@@ -28,6 +28,55 @@ In the network, we will:
 
 ## Solution
 
+Importing the NumPy library.
+```
+# Import the NumPy library
+import numpy as np
+```
 
+Normalize the data in the range [0,1] using min-max feature scaling.
+```
+#  Function to normalize data in the range [0,1] using min-max feature scaling
+def NormalizeData(data):
+    return (data - np.min(data)) / (np.max(data) - np.min(data))
+
+# Input data representing height and weight of patients
+X = np.array([[161,  55],
+              [183,  95],
+              [171,  60],
+              [194, 102],
+              [162,  58],
+              [185,  90],
+             ])
+
+# Normalize the input data
+scaled_x = NormalizeData(X)
+
+# Print the scaled input data
+print(scaled_x)
+```
+
+Defining sigmoid activation function.
+```
+# Sigmoid activation function : f(x) = 1 / (1 + e^(-x))
+def sigmoid(x):
+    return 1 / (1 + np.exp(-x))
+```
+
+Defining derivative of the sigmoid function.
+```
+# Derivative of the sigmoid function : f'(x) = f(x) * (1 - f(x))
+def deriv_sigmoid(x):
+    fx = sigmoid(x)
+    return fx * (1 - fx)
+```
+
+
+Defining mean squared error loss function
+```
+# Mean squared error loss function
+def mse_loss(y_true, y_pred):
+    return ((y_true - y_pred) ** 2).mean()
+```
 
 
