@@ -169,7 +169,6 @@ The loss is computed and printed every $10$ epochs.
                     y_preds = np.apply_along_axis(self.feedforward, 1, data)
                     loss = mse_loss(all_y_trues, y_preds)
                     print("Epoch %d loss: %.3f" % (epoch, loss))
-                    
 ```
 
 The input data and corresponding target values are defined.
@@ -201,6 +200,12 @@ An array representing the features (height and weight) of the fifth user is crea
 name5 = np.array([0.76978417, 0.02158273])
 print("Name 5: %.3f" % network.feedforward(name5))
 ```
+
+
+
+
+
+
 
 
 
